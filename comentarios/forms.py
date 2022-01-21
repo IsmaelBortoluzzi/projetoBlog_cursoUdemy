@@ -240,7 +240,6 @@ class FormComentario(ModelForm):  # se n herda, da esse erro: TypeError at /post
                        'Xana',
                        'Xaninha',
         ]
-        print(comentario)
 
         for palavrao in palavroes:
             print(palavrao)
