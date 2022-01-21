@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load humanize %}
+{% load ib_filters %}
 
 {% block conteudo %}
 <div class="card-columns mt-4 text-dark">
@@ -24,11 +25,12 @@
             <p class="card-text">{{ post.excerto_post }}</p>
             <p class="card-text">
                 <small class="text-muted">
-                    {{ post.data_post|naturalday|title }} |
-                    {{ post.numero_comentarios }} comentário(s)
-                    | {{ post.categoria_post }}</small>
+                    {{ post.data_post|naturalday|title }}
+                    |
+                    {{ post.numero_comentarios | plural_comentarios }}
+                    |
+                    {{ post.categoria_post }}</small>
             </p>
-
             <div class="text-right">
                 <a href="{% url 'post_detalhes' post.id %}" class="btn btn-outline-secondary">Ler mais...</a>
             </div>
