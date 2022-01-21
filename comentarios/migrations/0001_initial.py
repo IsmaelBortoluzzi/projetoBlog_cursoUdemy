@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('comentario', models.TextField()),
                 ('data_comentario', models.DateTimeField(default=django.utils.timezone.now)),
                 ('publicado_comentario', models.BooleanField(default=False)),
-                ('post_comentario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='posts.posts')),
+                ('post_comentario', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='posts.post')),
                 ('usuario_comentario', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to=settings.AUTH_USER_MODEL)),
             ],
         ),
