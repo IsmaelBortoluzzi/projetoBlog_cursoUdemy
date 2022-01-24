@@ -80,7 +80,7 @@ class PostDetalhes(View):
             'comentarios': Comentario.objects.filter(post_comentario=post, publicado_comentario=True),
             'form': FormComentario(request.POST or None),  # se n foi enviado, retorna None
         }
-        
+
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, self.contexto)
 
