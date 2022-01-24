@@ -242,7 +242,6 @@ class FormComentario(ModelForm):  # se n herda, da esse erro: TypeError at /post
         ]
 
         for palavrao in palavroes:
-            print(palavrao)
             if palavrao.lower() in comentario.lower():
                 self.add_error(
                     'comentario',
