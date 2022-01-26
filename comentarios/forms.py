@@ -242,7 +242,8 @@ class FormComentario(ModelForm):  # se n herda, da esse erro: TypeError at /post
         ]
 
         for palavrao in palavroes:
-            if palavrao.lower() in comentario.lower():
+            splitted = comentario.lower().split(' ')
+            if palavrao.lower() in splitted:
                 self.add_error(
                     'comentario',
                     'Não seja boca suja. Nosso blog não aceita palavrões'
